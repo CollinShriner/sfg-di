@@ -2,9 +2,7 @@ package shriner.springframework.sfgdi.controllers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import shriner.springframework.sfgdi.services.GreetingServiceImpl;
-
-import static org.junit.jupiter.api.Assertions.*;
+import shriner.springframework.sfgdi.services.ConstructorGreetingService;
 
 class ConstructorInjectedControllerTest {
 
@@ -15,7 +13,7 @@ class ConstructorInjectedControllerTest {
     ConstructorInjectedController controller;
     @BeforeEach
     void setUp() {
-        controller = new ConstructorInjectedController(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new ConstructorGreetingService());
     }
 
     @Test
