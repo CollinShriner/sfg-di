@@ -1,11 +1,15 @@
 package shriner.springframework.sfgdi.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import shriner.springframework.sfgdi.services.GreetingService;
 
+@Controller
 public class ConstructorInjectedController {
 
     private final GreetingService greetingService;
 
+    //@Autowired is optional on constructors
     public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
